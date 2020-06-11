@@ -1,0 +1,6 @@
+*** Installation steps ***
+
+-   Install Python and add it to Path variable
+-	Navigate to http://www.jetbrains.com/ and install PyCharm
+-   Install the requirements by executing the below command:
+        pip install -r requirements.txt

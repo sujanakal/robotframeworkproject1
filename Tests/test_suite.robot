@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       This is basic information about the Suite
 Library             SeleniumLibrary
-Resource            ../resources/data/TestData.robot
+Resource            ../resources/data/testdata.robot
 
 
 *** Variables ***
@@ -13,7 +13,7 @@ ${first_result_locator}             xpath://*[@id="search"]/div[1]/div[2]/div/sp
 
 
 *** Test Cases ***
-Test Case: To verify user is able to search the product in Amazon.in
+Test Case 1: To verify user is able to search the product in Amazon.in
     [Documentation]    Searching product in MFT Portal
     [Tags]    Smoke
 
@@ -28,7 +28,6 @@ Test Case: To verify user is able to search the product in Amazon.in
     log to console    Product searched
     sleep    5s
     Close All Browsers
-
 
 
 *** Keywords ***
