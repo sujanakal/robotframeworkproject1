@@ -1,7 +1,7 @@
 *** Robot file execution through Python script (with arguments) ***
 
-- Execute entire suite
-        python execution.py
+- Execute entire suite using the argument 'suite'
+        python execution.py suite
 
 
 

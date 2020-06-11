@@ -3,13 +3,15 @@
  entire suite, single suite, single test case, tags, batch etc"""
 
 import os
+import sys
 import datetime
 
 current_datetime = datetime.datetime.now().strftime("%d%m%y_%H%M%S.%f")
+arg = sys.argv[1]
+cmd = ''
 
-# Command to execute entire suite
-cmd = "robot -d results/test_suite_" + current_datetime + " tests/test_suite.robot"
+# Command to execute entire suite; Argument = 'suite'
+if arg == 'suite':
+    cmd = "robot -d results/test_suite_" + current_datetime + " tests/test_suite.robot"
+
 os.system(cmd)
-
-# Create a way to get command line argument and then based on the
-# argument run different robot execution ways
