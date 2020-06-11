@@ -5,11 +5,11 @@ Resource            ../resources/data/TestData.robot
 
 
 *** Variables ***
-${mainpage_header_locator}        xpath://*[@id="a-page"]/header
-${search_inputbox_locator}      id:twotabsearchtextbox
-${search_button_locator}          xpath://*[@id="nav-search"]/form/div[2]/div/input
-${search_resultdiv_locator}       xpath://*[@id="search"]/div[2]/div[2]/div/div[2]
-${first_result_locator}         xpath://*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[2]/div/span/div/div/div/div/span/a/div/img
+${mainpage_header_locator}          xpath://*[@id="a-page"]/header
+${search_inputbox_locator}          id:twotabsearchtextbox
+${search_button_locator}            xpath://*[@id="nav-search"]/form/div[2]/div/input
+${search_resultdiv_locator}         xpath://*[@id="search"]/div[2]/div[2]/div/div[2]
+${first_result_locator}             xpath://*[@id="search"]/div[1]/div[2]/div/span[3]/div[2]/div[2]/div/span/div/div/div/div/div[2]/h2/a
 
 
 *** Test Cases ***
@@ -25,8 +25,7 @@ Test Case: To verify user is able to search the product in Amazon.in
     input text    ${search_inputbox_locator}     ${product_name}
     sleep    5s
     click button        ${search_button_locator}
-#    wait until element is visible       ${search_resultdiv_xpath}
-    log to console    Searched the element
+    log to console    Product searched
     sleep    5s
     Close All Browsers
 
