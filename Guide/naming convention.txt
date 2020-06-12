@@ -1,0 +1,6 @@
+*** Follow the below main folder structures ***
+    - Resources
+    - Results
+    - Tests
+    - Libraries
+    - Keywords

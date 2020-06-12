@@ -1,13 +1,22 @@
 *** Robot file execution through Python script (with arguments) ***
 
-- Execute entire suite using the argument 'suite'
-        python execution.py suite
+    - Execute a single robot file. If there are multiple folders, provide exculding main tests folder
+        python execution.py single <file_name>
+            ex: python execution.py single Test1/amazon.robot
 
+    - Execute the tags (ex: smoke)
+        python execution.py tag smoke <file_name>
+        python execution.py tag p1 <file_name>
+        python execution.py tag sanity <file_name>
 
 
 
 *** Robot File direct execution ***
 
-- To execute the suite run this command from the cmd ***
+    - To execute the one robot file run this command from the cmd
         robot -d results tests/test_suite.robot
+
+    - To execute multiple suites. To specify the top level suite title in the reports, use -N attribute
+        robot -d results tests
+        robot -d results -N "Full Regression" tests
 
