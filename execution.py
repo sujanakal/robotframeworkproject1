@@ -18,7 +18,7 @@ if arg == 'single':
 
 elif arg == 'suite':
     suite_name = sys.argv[2]
-    cmd = "robot -d results/suite"+ suite_name +"/" + current_datetime + " tests/" + suite_name
+    cmd = "robot -d results/suite/"+ suite_name +"/" + current_datetime + " tests/" + suite_name
 
 elif arg == 'all_suites':
     # This is to execute the multiple suites (entire tests folder)

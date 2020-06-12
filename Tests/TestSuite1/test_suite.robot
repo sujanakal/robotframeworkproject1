@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       This is basic information about the Suite
 Library             SeleniumLibrary
-Resource            ../resources/data/testdata.robot
+Resource            ../../resources/data/testdata.robot
 
 
 *** Variables ***

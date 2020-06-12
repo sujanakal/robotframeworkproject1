@@ -4,6 +4,15 @@
         python execution.py single <file_name>
             ex: python execution.py single Test1/amazon.robot
 
+    - Execute a single suite
+        python execution.py suite <suite_foler_name>
+
+    - Execute multiple suites (all the suites in the tests folder)
+        python execution.py all_suites
+
+    - To execute batch file. Make necessary changes to batch file before executing the command.
+        python execution.py batch
+
     - Execute the tags (ex: smoke)
         python execution.py tag smoke <file_name>
         python execution.py tag p1 <file_name>
