@@ -1,9 +1,5 @@
 *** Robot file execution through Python script (with arguments) ***
 
-    - Execute a single robot file. If there are multiple folders, provide exculding main tests folder
-        python execution.py single <file_name>
-            ex: python execution.py single Test1/amazon.robot
-
     - Execute a single suite
         python execution.py suite <suite_foler_name>
 
@@ -12,6 +8,9 @@
 
     - To execute batch file. Make necessary changes to batch file before executing the command.
         python execution.py batch
+
+    - To execute a single test
+        python execution.py test_case "<test_case_name>"
 
     - Execute the tags (ex: smoke)
         python execution.py tag smoke <file_name>
@@ -29,3 +28,6 @@
         robot -d results tests
         robot -d results -N "Full Regression" tests
 
+    - To execute a single test using '-t' attribute
+        robot -d results -t "Test Case 1" tests/TestSuite1
+        robot -d results -t "Test Case 2" tests

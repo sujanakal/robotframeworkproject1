@@ -11,12 +11,8 @@ current_datetime = datetime.datetime.now().strftime("%d%m%y_%H%M%S.%f")
 arg = sys.argv[1]
 cmd = ''
 
-if arg == 'single':
-    # This is to execute the single robot file
-    file_name = sys.argv[2]
-    cmd = "robot -d results/test/" + current_datetime + " /tests/" + file_name
-
-elif arg == 'suite':
+if arg == 'suite':
+    # This is to execute a single suite specified in the command
     suite_name = sys.argv[2]
     cmd = "robot -d results/suite/"+ suite_name +"/" + current_datetime + " tests/" + suite_name
 
@@ -28,6 +24,12 @@ elif arg == 'batch':
     #This is to execute the batch file
     subprocess.call([r'batchrun.bat'])
     cmd = 'echo Batch execution complete'
+
+elif arg == 'test_case':
+    #This is to execute a single test case specified in the command
+    test_case_name = sys.argv[2]
+    print(test_case_name)
+    cmd = "robot -d \"results/" + test_case_name +"/" + current_datetime + "\" -t \"" + test_case_name + "\" tests/demo"
 
 elif arg == 'tag':
     # This is to execute the files based on tags

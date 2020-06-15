@@ -13,8 +13,8 @@ ${first_result_locator}             xpath://*[@id="search"]/div[1]/div[2]/div/sp
 
 
 *** Test Cases ***
-Test Case 1: To verify user is able to search the product in Amazon.in
-    [Documentation]    Searching product in MFT Portal
+Test Case 1
+    [Documentation]    To verify user is able to search the product in Amazon.in
     [Tags]    Smoke
 
     Open Browser     ${amazonurl}   chrome
